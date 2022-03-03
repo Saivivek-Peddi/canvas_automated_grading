@@ -116,20 +116,3 @@ Sai Vivek Peddi - svpeddi@ucdavis.edu
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/saivivek-peddi
 [product-screenshot]: images/icon.png
-
-
-
-Editing config
-You can find the course id when you click on the courses in canvas UI
-Eg https://canvas.ucdavis.edu/courses/632679
-course_id = 632679
-
-Functionalities -
-1. Gets the list of courses
-2. Gets the list of quizzes in the course
-3. Get the latest submissions from all the students for the selected Quizzes.
-4. Get the groups for the quizzes.
-5. Parse the quiz answers.
-6. Tag the false testifications.
-7. Grade the submissions
-8. Upload the grades.
