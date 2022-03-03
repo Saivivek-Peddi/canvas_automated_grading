@@ -54,7 +54,7 @@ This project requires python 3.6 or greater and also use virutalenv
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Saivivek-Peddi/Zillow-Scraper.git
+   git clone https://github.com/Saivivek-Peddi/canvas_automated_grading.git
    ```
 2. CD into the project directory
    ```sh
