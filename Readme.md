@@ -58,9 +58,8 @@ This project requires python 3.6 or greater and also use virutalenv
    ```
 2. CD into the project directory
    ```sh
-   cd Study_Grading
+   cd canvas_automated_grading
    ```
-3. Put the previously dowloaded chromedriver in driver folder
 4. Create a virtualenv and start it
    ```sh
    virtualenv venv && source venv/bin/activate
