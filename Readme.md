@@ -90,7 +90,9 @@ This project requires python 3.6 or greater and also use virutalenv
 9. This script will post all the grades on to canvas and also generate files inside `final_grades` and `final_tags` fodler to list all final grades assigned and final tagged students for further processing.
 
 <!-- DEMO -->
-<!-- ## Demo -->
+## Demo
+[![DEMO](https://img.youtube.com/vi/k_ku1saeaxI/0.jpg)](https://www.youtube.com/watch?v=k_ku1saeaxI)
+
 <!-- LICENSE -->
 ## License
 
