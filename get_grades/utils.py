@@ -305,9 +305,9 @@ def get_score(flag,answer):
         return 0
     else:
         if answer['time']>=20:
-            return 6
+            return 20
         else:
-            return 6*(answer['time']/20)
+            return 20*(answer['time']/20)
         
 # def date_score(a,b):
 #     if b=='':
