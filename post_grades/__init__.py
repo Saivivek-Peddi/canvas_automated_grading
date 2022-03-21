@@ -22,11 +22,22 @@ class Post_Grades:
 
         # Initialize a new Canvas object and get all the courses
         canvas = Canvas(self.api_url, self.api_key)
-        
-        print('Started Posting Grades, this might take some time')
         for item in quiz_config:
             course = canvas.get_course(item['course_id'])
+            break
+        
+        assignments = []
+        for assignment in course.get_assignments():
+            if 'Evaluation' in assignment.name:
+                assignments.append(assignment)
+        print('Started Posting Grades, this might take some time')
+        for item in quiz_config:
             assignment = course.get_assignment(item['id'])
+            for eval_item in assignments:
+                if assignment.name in eval_item.name:
+                    print(f'{assignment.name} ---> {eval_item.name}')
+                    assignment = eval_item
+                    break
             name = item['name']
             start_time = datetime.now()
             print(f'Posting started for {name}')

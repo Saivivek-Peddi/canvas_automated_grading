@@ -256,20 +256,24 @@ def get_truth_score(name,groupmates,answer,col,df):
         fin_truth.append(1)
     
     # Groupmates - Checking if interacted with same group mates.
-    if topic_score(' '.join(answer['interacted_with']),' '.join(groupmates))<40:
-        fin_truth.append(0)
-        question = {
-            'question':'Most of your interactees are not your assigned groupmates, Why?',
-            'notes':[
-                f'Did not interact with many groupmates',
-                {
-                    'interacted_with': answer['interacted_with'],
-                    'group_mates':groupmates
-                }
-            ] 
-        }
-        questions.append(question)
-    else:
+    try:
+        if topic_score(' '.join(answer['interacted_with']),' '.join(groupmates))<40:
+            fin_truth.append(0)
+            question = {
+                'question':'Most of your interactees are not your assigned groupmates, Why?',
+                'notes':[
+                    f'Did not interact with many groupmates',
+                    {
+                        'interacted_with': answer['interacted_with'],
+                        'group_mates':groupmates
+                    }
+                ] 
+            }
+            questions.append(question)
+        else:
+            fin_truth.append(1)
+    except Exception as e:
+        print('Unable to fetch groupmates')
         fin_truth.append(1)
     
     truth_score = (sum(fin_truth)/len(fin_truth))*100 
