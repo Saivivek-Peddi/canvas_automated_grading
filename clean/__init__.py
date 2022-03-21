@@ -13,13 +13,19 @@ class Clean:
             self.remove_and_create(f'{path}/final_tags')
             print('')
         else:
-            shutil.rmtree(f'{path}/manual_inspections')
-            shutil.rmtree(f'{path}/submissions')
-            shutil.rmtree(f'{path}/groups')
-            shutil.rmtree(f'{path}/temp_grades')
-            shutil.rmtree(f'{path}/final_grades')
-            shutil.rmtree(f'{path}/final_tags')
+            self.remove(f'{path}/manual_inspections')
+            self.remove(f'{path}/submissions')
+            self.remove(f'{path}/groups')
+            self.remove(f'{path}/temp_grades')
+            self.remove(f'{path}/final_grades')
+            self.remove(f'{path}/final_tags')
 
+    def remove(self,path):
+        try:
+            shutil.rmtree(path)
+        except:
+            pass
+    
     def remove_and_create(self,path):
         try:
             shutil.rmtree(path)
